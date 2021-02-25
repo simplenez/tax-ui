@@ -5,8 +5,9 @@ export default function CalcHistory(props) {
         return props.calcHistory.map(calc => {
             return <tr key={calc.id}>
                 <td>{calc.id}</td>
-                <td>{calc.income}</td>
-                <td>tax</td>
+                <td>{calc.year}</td>
+                <td>{calc.incomeDisplay}</td>
+                <td>{calc.taxDisplay}</td>
             </tr>
         });
     }
@@ -16,6 +17,7 @@ export default function CalcHistory(props) {
             <thead>
                 <tr key={0}>
                     <th>ID</th>
+                    <th>Year</th>
                     <th>Income</th>
                     <th>Tax</th>
                 </tr>
